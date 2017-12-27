@@ -6,7 +6,7 @@ Speech Recognition is one of the important and challenging tasks in today’s wo
 
 ###Feature Extraction
 
-The sound features for the methods PLP, RPLP and RPLPwavelet are extracted using Matlab codes. Rastamat [27] sound processing toolbox is used in this work for calculating the PLP cepstral coefficients. 
+The sound features for the methods PLP, RPLP and RPLPwavelet are extracted using Matlab codes. Rastamat [27] sound processing toolbox is used in this work for calculating the PLP cepstral coefficients. The dataset is available here https://drive.google.com/file/d/1SgE0pStzqc4KuUgkakKjUbDFuQvZ04e2/view?usp=sharing
 
 The 'Feature Extraction' folder contains implementation of speech feature extraction for PLP, RPLP and RPLPwavelet in three different ways. In all the folders there is a file named 'Main.m'. Running this file in matlab will generate either train or test speech files' features in individual folders in the same directory. Suppose in 'PLPusingrasta', there are two generated folders 'PLPTrainResultFolder' and 'PLPTestResultFolder'.
 

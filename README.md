@@ -4,13 +4,13 @@ Speech Recognition is one of the important and challenging tasks in today’s wo
 
 ## Implementation Detail
 
-###Feature Extraction
+### Feature Extraction
 
 The sound features for the methods PLP, RPLP and RPLPwavelet are extracted using Matlab codes. Rastamat [27] sound processing toolbox is used in this work for calculating the PLP cepstral coefficients. The dataset is available here https://drive.google.com/file/d/1SgE0pStzqc4KuUgkakKjUbDFuQvZ04e2/view?usp=sharing
 
 The 'Feature Extraction' folder contains implementation of speech feature extraction for PLP, RPLP and RPLPwavelet in three different ways. In all the folders there is a file named 'Main.m'. Running this file in matlab will generate either train or test speech files' features in individual folders in the same directory. Suppose in 'PLPusingrasta', there are two generated folders 'PLPTrainResultFolder' and 'PLPTestResultFolder'.
 
-###Feature Classification
+### Feature Classification
 
 Acoustic features are obtained from application of PLP, RPLP and RPLPwavelet. Since CNN (Convolutional Neural Network) demands large dataset to train, artificial data are synthesized to be used for training the neural network model along with the authentic ones. Before training the model, the data need to be normalized. In this work, normalization with mean=zero and standard deviation=1 is performed. Keras library from Python is used to train the CNN model here that uses Tensorflow at its backend. Due to gpu support of tensorflow, training the models is very time efficient now. A dataset containing 500 samples per digit class is trained with two convolutional layers containing kernel size 128 and two dense layers with kernel size 200 in its first layer are applied. In the first three layes activation function ‘relu’ is used, and ‘softmax’ is used in the last layer. Different strategies and combinations are followed for obtaining the best results of each of the method. The generated models are saved as .json format for future loading and testing with different test datasets.
 
